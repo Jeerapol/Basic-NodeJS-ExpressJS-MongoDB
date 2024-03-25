@@ -7,4 +7,6 @@ Require
 - jsonwebtoken
 - mongoose
 - morgan
+- bcryptjs
+- dotenv
 - nodemon (If you want to use)

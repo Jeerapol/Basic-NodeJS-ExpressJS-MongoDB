@@ -9,6 +9,9 @@ const {
   create,
 } = require("../Controllers/product");
 
+//Middleware
+const { auth } = require("../Middleware/auth");
+
 // const Products = [
 //   {
 //     id: 1,
@@ -18,17 +21,17 @@ const {
 //   },
 // ];
 
-router.get("/product", list);
+router.get("/product", auth, list);
 
-router.get("/product/:id", read);
+router.get("/product/:id", auth, read);
 
-router.post("/product/:id", create1);
+router.post("/product/:id", auth, create1);
 
-router.post("/product/", create);
+router.post("/product/", auth, create);
 
-router.put("/product/:id", update);
+router.put("/product/:id", auth, update);
 
-router.delete("/product/:id", delete1);
+router.delete("/product/:id", auth, delete1);
 
 // router.delete("/product/:id", async (req, res) => {
 //   // ดึง ID สินค้าจากพารามิเตอร์การร้องขอ

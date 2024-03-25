@@ -1,10 +1,7 @@
 const mongoose = require("mongoose");
 
-const UsersScheme = mongoose.Schemas(
+const UsersScheme = mongoose.Schema(
   {
-    _id: {
-      type: mongoose.Schema.Types.ObjectId,
-    },
     name: {
       type: String,
     },
